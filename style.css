@@ -8,7 +8,6 @@
     --text-muted: #8a95a1;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +35,7 @@ img {
     background: var(--white);
 }
 
-.header-top {
+.header__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -64,7 +63,7 @@ img {
     width: 24px;
 }
 
-.header-banner img {
+.header__banner img {
     width: 100%;
 }
 
@@ -73,14 +72,14 @@ section {
     padding: 80px 60px;
 }
 
-.section-title {
+.section__title {
     text-align: center;
     font-size: 26px;
     letter-spacing: 2px;
     margin-bottom: 50px;
 }
 
-section > h1 {
+.section__subtitle {
     text-align: center;
     font-size: 14px;
     color: var(--text-muted);
@@ -92,23 +91,23 @@ section > h1 {
     background: var(--white);
 }
 
-.process-grid {
+.process-section__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
 }
 
-.process-item {
+.process-section__item {
     text-align: center;
     padding: 20px;
 }
 
-.process-item h3 {
+.process-section__item-title {
     margin: 20px 0 10px;
     font-size: 18px;
 }
 
-.process-item p {
+.process-section__item-text {
     font-size: 14px;
     color: var(--text-muted);
     line-height: 1.6;
@@ -119,30 +118,30 @@ section > h1 {
     background: var(--light-bg);
 }
 
-.taste-grid {
+.taste-section__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
 }
 
-.taste-item {
+.taste-section__item {
     background: var(--white);
     padding: 30px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.05);
 }
 
-.taste-price {
+.taste-section__item-price {
     color: var(--beige);
     font-weight: bold;
     margin: 15px 0;
 }
 
-.taste-name {
+.taste-section__item-name {
     font-size: 18px;
     margin-bottom: 8px;
 }
 
-.taste-flavor {
+.taste-section__item-flavor {
     font-size: 14px;
     color: var(--text-muted);
     margin-bottom: 20px;
@@ -158,21 +157,26 @@ section > h1 {
     margin-right: 15px;
 }
 
-.btn-primary {
+.btn--primary {
     background: var(--beige);
     color: var(--white);
 }
 
-.btn-secondary {
+.btn--secondary {
     color: var(--text-dark);
 }
 
+.btn--small {
+    padding: 8px 20px;
+    font-size: 12px;
+}
 
-.main-banner {
+
+.banner-section {
     background: var(--light-bg);
 }
 
-.banner-content {
+.banner-section__content {
     background: var(--white);
     display: flex;
     flex-direction: column;
@@ -182,24 +186,29 @@ section > h1 {
     margin: auto;
 }
 
-.banner-subtitle {
+.banner-section__subtitle {
     font-size: 14px;
     color: var(--text-muted);
 }
 
-.banner-title {
+.banner-section__title {
     font-size: 32px;
     letter-spacing: 2px;
     margin: 10px 0 30px;
 }
 
-.banner-price {
+.banner-section__price {
     color: var(--beige);
     font-size: 20px;
     margin: 20px 0;
 }
 
-.banner-text {
+.banner-section__name {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.banner-section__text {
     text-align: center;
     font-size: 14px;
     color: var(--text-muted);
@@ -207,32 +216,36 @@ section > h1 {
     margin: 20px 0 30px;
 }
 
-.banner-details {
+.banner-section__details {
     display: flex;
     gap: 60px;
     margin-bottom: 30px;
 }
 
-.detail-item {
+.banner-section__detail-item {
     text-align: center;
 }
 
-.detail-item h3 {
+.banner-section__detail-title {
     font-size: 14px;
     margin-top: 10px;
 }
 
-.detail-item p {
+.banner-section__detail-text {
     font-size: 14px;
     color: var(--text-muted);
 }
 
+.banner-section__buttons {
+    margin-top: 20px;
+}
 
-.pr-card {
+
+.products-section {
     background: var(--light-bg);
 }
 
-.products-grid {
+.products-section__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
@@ -243,38 +256,42 @@ section > h1 {
     box-shadow: 0 20px 40px rgba(0,0,0,0.05);
 }
 
-.product-content {
+.product-card__content {
     padding: 30px;
 }
 
-.product-title {
+.product-card__title {
     font-size: 18px;
     margin: 15px 0 10px;
 }
 
-.product-description {
+.product-card__description {
     font-size: 14px;
     color: var(--text-muted);
     line-height: 1.6;
 }
 
-.product-price {
+.product-card__price {
     margin: 15px 0;
 }
 
-.current-price {
+.product-card__current-price {
     color: var(--beige);
     font-weight: bold;
     margin-right: 10px;
 }
 
-.original-price {
+.product-card__original-price {
     text-decoration: line-through;
     color: var(--text-muted);
 }
 
+.product-card__buttons {
+    margin-top: 20px;
+}
 
-.footer-bottom {
+
+.footer__bottom {
     text-align: center;
     padding: 30px;
     font-size: 14px;
