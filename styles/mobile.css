@@ -1,0 +1,240 @@
+/* Планшет (1024px и меньше) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .header__top {
+        padding: 15px 0;
+    }
+
+    .nav__list {
+        gap: 20px;
+    }
+
+    .header__cta {
+        display: none; 
+    }
+}
+
+/* Планшет и мобильник (768px и меньше) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-between;
+        width: 44px;
+        height: 44px;
+        background: transparent;
+        border: none;
+        padding: 12px 10px;
+        cursor: pointer;
+        z-index: 1001;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .menu-toggle_line {
+        width: 100%;
+        height: 3px;
+        background: var(--text-dark);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .menu-toggle.active .menu-toggle_line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .menu-toggle.active .menu-toggle_line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .menu-toggle_line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: white;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        padding: 100px 30px 30px;
+        transition: right 0.4s ease;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: 0;
+        margin-top: 20px;
+    }
+
+    .nav__item {
+        width: 100%;
+    }
+
+    .nav__link {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 18px;
+        border-bottom: 1px solid #eee;
+        text-align: left;
+        color: var(--text-dark);
+        text-decoration: none;
+    }
+
+    .nav__link:hover,
+    .nav__link.active {
+        background: transparent;
+        color: var(--beige);
+        padding-left: 10px;
+    }
+
+   
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+
+    .nav-overlay.active {
+        display: block;
+    }
+
+  
+    .btn {
+        min-width: 120px;
+    }
+
+    .cart {
+        position: absolute;
+        right: 70px;
+        top: 25px;
+        z-index: 1001;
+    }
+
+    .header__top {
+        justify-content: space-between;
+        padding: 15px 0;
+    }
+
+    .logo {
+        margin: 0;
+        z-index: 1001;
+    }
+
+    .logo-img {
+        height: 35px;
+    }
+
+ 
+    .process-section__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .taste-section__grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .products-section__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Мобильные (480px и меньше) */
+@media (max-width: 480px) {
+    .nav {
+        width: 100%;
+    }
+
+    .logo-img {
+        width: 100px;
+        height: auto;
+    }
+
+    body {
+        font-size: 17px; 
+    }
+
+    .process-section__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .products-section__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-section__details {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+}
+
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    background: var(--beige);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background: #b89465;
+    transform: scale(1.1);
+}
+
+.scroll-top:active {
+    transform: scale(0.95);
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .scroll-top {
+        width: 52px;
+        height: 52px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 22px;
+    }
+}
